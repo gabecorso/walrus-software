@@ -1,0 +1,895 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+@font-face {
+  font-family: GothamBold;
+  src: url('/assets/fonts/GothamBold.otf') format('otf');
+}
+
+/*******************************************************
+					LANDING PAGE
+*******************************************************/
+.home-left {
+  float: left;
+}
+
+.title {
+  font-size: 50px;
+  font-family: Lato;
+  margin: 275px 0 0 175px;
+}
+
+@-webkit-keyframes cf3FadeInOut {
+  0% {
+    opacity:1;
+  }
+  25% {
+    opacity:1;
+  }
+  75% {
+    opacity:0;
+  }
+  100% {
+    opacity:0;
+  }
+}
+
+@-moz-keyframes cf3FadeInOut {
+  0% {
+    opacity:1;
+  }
+  25% {
+    opacity:1;
+  }
+  75% {
+    opacity:0;
+  }
+  100% {
+    opacity:0;
+  }
+}
+
+@-o-keyframes cf3FadeInOut {
+  0% {
+    opacity:1;
+  }
+  25% {
+    opacity:1;
+  }
+  75% {
+    opacity:0;
+  }
+  100% {
+    opacity:0;
+  }
+}
+
+@keyframes cf3FadeInOut {
+  0% {
+    opacity:1;
+  }
+  25% {
+    opacity:1;
+  }
+  75% {
+    opacity:0;
+  }
+  100% {
+    opacity:0;
+  }
+}
+
+#cf3 {
+  position:relative;
+  padding-top: 150px;
+  margin-bottom: 600px;
+}
+#cf3 img {
+  position: absolute;
+  right: 0;
+}
+
+#cf3 img.top {
+  -webkit-animation-name: cf3FadeInOut;
+  -webkit-animation-timing-function: ease-in;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-duration: 2s;
+  -webkit-animation-direction: alternate;
+
+  -moz-animation-name: cf3FadeInOut;
+  -moz-animation-timing-function: ease-in;
+  -moz-animation-iteration-count: 1;
+  -moz-animation-duration: 2s;
+  -moz-animation-direction: alternate;
+
+  -o-animation-name: cf3FadeInOut;
+  -o-animation-timing-function: ease-in;
+  -o-animation-iteration-count: 1;
+  -o-animation-duration: 2s;
+  -o-animation-direction: alternate;
+
+  animation-name: cf3FadeInOut;
+  animation-timing-function: ease-in;
+  animation-iteration-count: 1;
+  animation-duration: 2s;
+  animation-direction: alternate;
+}
+
+.dot {
+  margin: 15px 0 0 185px;
+}
+
+.dot img {
+  padding-right: 20px;
+}
+
+.sizeChoice {
+  display: none;
+  position: absolute;
+
+  padding-bottom: 50%;
+  overflow: hidden;
+}
+
+.sizeHover:hover .sizeChoice{
+  display: block;
+}
+
+.sizeHover {
+  :hover {
+    opacity: 0.8;
+    background-color: black;
+  }
+}
+
+/*******************************************************
+			    PORTFOLIO / PHOTO GRID
+*******************************************************/
+
+hr {
+  width: 100%;
+  height: 2px;
+  background-color: black;
+  padding: 0;
+  margin: 0;
+}
+
+.wrap {
+  overflow: hidden;
+  margin-top: -2px;
+}
+
+.box {
+  float: left;
+  position: relative;
+  width: 33.3%;
+  padding-bottom: 33.3%;
+  overflow: hidden;
+}
+
+.boxS {
+  float: left;
+  position: relative;
+  width: 50%;
+  padding-bottom: 50%;
+  overflow: hidden;
+}
+
+.boxInner {
+  position: absolute;
+  width: 100%;
+}
+
+.boxInner img {
+  width: 100%;
+  cursor: pointer;
+  display: block;
+  margin: 0 auto;
+  -webkit-user-drag: none;
+  user-drag: none;
+
+}
+
+.purchase-btn {
+  background: image-url('purchase.png') no-repeat;
+  background-size: 100px 30px;
+  cursor: pointer;
+  vertical-align: bottom;
+  border: none;
+  width: 100px;
+  height: 30px;
+
+}
+
+body.no-touch .boxInner:hover .titleBox, body.touch .boxInner.touchFocus .titleBox {
+  margin-bottom: 0;
+}
+
+@media only screen and (max-width : 480px) {
+  /* Smartphone view: 1 tile */
+  .box {
+    width: 100%;
+    padding-bottom: 100%;
+  }
+}
+
+@media only screen and (max-width : 650px) and (min-width : 481px) {
+  /* Tablet view: 2 tiles */
+  .box {
+    width: 50%;
+    padding-bottom: 50%;
+  }
+}
+
+@media only screen and (max-width : 1050px) and (min-width : 651px) {
+  /* Small desktop / ipad view: 3 tiles */
+  .box {
+    width: 33.3%;
+    padding-bottom: 33.3%;
+  }
+}
+
+@media only screen and (max-width : 1290px) and (min-width : 1051px) {
+  /* Medium desktop: 4 tiles */
+  .box {
+    width: 33.3%;
+    padding-bottom: 25%;
+  }
+}
+
+.sizes {
+  margin: 15px 150px 15px 50%;
+  font-family: Lato;
+  font-size: 20px;
+}
+
+/*******************************************************
+					ARTIST BIO
+*******************************************************/
+.eamon {
+  margin-top: 50px;
+  margin-left: 175px;
+  display: inline-block;
+  float: left;
+  padding-bottom: 50px;
+}
+
+.fname {
+  position: absolute;
+  color: white;
+  font-family: GothamBold;
+  font-size: 40px;
+  padding-top: 60px;
+  padding-left: 380px;
+  text-shadow: 3px 3px 15px #000000;
+}
+
+.lname {
+  color: black;
+  font-family: GothamBold;
+  font-size: 40px;
+  padding-top: 60px;
+}
+
+.bio {
+  margin: 40px 150px 0 600px;
+  font-family: Lato;
+  font-size: 18px;
+}
+
+a {
+  text-decoration: none;
+}
+a:link {
+  color: Black;
+}
+a:visited {
+  color: Black;
+}
+a:hover {
+  color: SeaGreen;
+}
+
+/*******************************************************
+					CONTACT
+*******************************************************/
+#logo {
+  padding-left: 175px;
+  padding-top: 40px;
+}
+
+.email {
+  display: inline-block;
+  padding-left: 30px;
+  font-family: Lato;
+  font-size: 17px;
+  vertical-align: middle;
+  margin-top: -20px;
+}
+
+.phone {
+  display: inline-block;
+  padding-left: 30px;
+  font-family: Lato;
+  font-size: 17px;
+  vertical-align: middle;
+  margin-top: -20px;
+}
+
+.insta {
+  display: inline-block;
+  padding-left: 30px;
+  font-family: Lato;
+  font-size: 17px;
+  vertical-align: middle;
+  margin-top: -40px;
+  text-decoration: none;
+}
+
+.footer {
+  width: 100%;
+  background-color: black;
+  margin-top: 40px;
+  text-align: center;
+  font-family: Lato;
+  vertical-align: middle;
+  padding: 20px 0;
+  font-size: 16px;
+}
+
+.footer a {
+  color: white;
+  text-decoration: none;
+}
+
+/*******************************************************
+					MEDIA QUERIES
+*******************************************************/
+
+@media (min-width: 320px) {
+  .section-header {
+    font-family: Lato;
+    font-size: 20px;
+    padding: 20px 0 20px 30px;
+  }
+
+  .contact-details {
+
+    font-family: Lato;
+    font-size: 17px;
+    padding: 20px 0 20px 30px;
+    text-align: center;
+  }
+  .eamon {
+    margin-top: 50px;
+    margin-left: 30px;
+    display: inline-block;
+    float: left;
+    padding-bottom: 0px;
+  }
+
+  .eamon img {
+    width: 270px;
+  }
+
+  .fname {
+    position: absolute;
+    color: white;
+    font-family: GothamBold;
+    font-size: 40px;
+    padding-top: 310px;
+    padding-left: 40px;
+    text-shadow: 3px 3px 15px #000000;
+  }
+
+  .lname {
+    color: black;
+    font-family: GothamBold;
+    font-size: 40px;
+    padding-left: 40px;
+  }
+
+  .bio {
+    margin: 20px 50px 0 30px;
+    font-family: Lato;
+    font-size: 16px;
+    clear: both;
+    padding-bottom: 40px;
+  }
+
+  #cf3 {
+    position:relative;
+    padding-top: 150px;
+    margin-bottom: 250px;
+  }
+
+  #cf3 img {
+    width: 250px;
+    padding-bottom: 100px;
+  }
+
+  .title {
+    font-size: 25px;
+    font-family: Lato;
+    margin: 50px 0 0 30px;
+  }
+
+  .dot {
+    margin: 15px 0 0 35px;
+  }
+
+  #logo {
+    padding-left: 30px;
+  }
+}
+
+
+@media (min-width: 400px) {
+  .section-header {
+    font-family: Lato;
+    font-size: 20px;
+    padding: 20px 0 20px 30px;
+  }
+
+  .eamon {
+    margin-top: 50px;
+    margin-left: 30px;
+    display: inline-block;
+    float: left;
+    padding-bottom: 0px;
+  }
+
+  .eamon img {
+    width: 300px;
+  }
+
+  .fname {
+    position: absolute;
+    color: white;
+    font-family: GothamBold;
+    font-size: 40px;
+    padding-top: 340px;
+    padding-left: 40px;
+    text-shadow: 3px 3px 15px #000000;
+  }
+
+  .lname {
+    color: black;
+    font-family: GothamBold;
+    font-size: 40px;
+    padding-left: 40px;
+  }
+
+  .bio {
+    margin: 20px 50px 0 30px;
+    font-family: Lato;
+    font-size: 16px;
+    clear: both;
+    padding-bottom: 40px;
+  }
+
+  #cf3 {
+    position:relative;
+    padding-top: 150px;
+    margin-bottom: 250px;
+  }
+
+  #cf3 img {
+    width: 250px;
+  }
+
+  .title {
+    font-size: 25px;
+    font-family: Lato;
+    margin: 50px 0 0 30px;
+  }
+
+  .dot {
+    margin: 15px 0 0 35px;
+  }
+
+  #logo {
+    padding-left: 30px;
+  }
+}
+
+/* Larger than phablet (also point when grid becomes active) */
+@media (min-width: 550px) {
+  .section-header {
+    font-family: Lato;
+    font-size: 20px;
+    padding: 20px 0 20px 30px;
+  }
+
+  .eamon {
+    margin-top: 50px;
+    margin-left: 30px;
+    display: inline-block;
+    float: left;
+    padding-bottom: 20px;
+  }
+
+  .eamon img {
+    width: 300px;
+  }
+
+  .fname {
+    position: absolute;
+    color: white;
+    font-family: GothamBold;
+    font-size: 40px;
+    padding-top: 60px;
+    padding-left: 160px;
+    text-shadow: 3px 3px 15px #000000;
+  }
+
+  .lname {
+    color: black;
+    font-family: GothamBold;
+    font-size: 40px;
+    padding-top: 60px;
+  }
+
+  .bio {
+    margin: 20px 100px 0 30px;
+    font-family: Lato;
+    font-size: 16px;
+    clear: both;
+    padding-bottom: 40px;
+  }
+
+  #cf3 {
+    position:relative;
+    padding-top: 150px;
+    margin-bottom: 300px;
+  }
+
+  #cf3 img {
+    width: 300px;
+  }
+
+  .title {
+    font-size: 30px;
+    font-family: Lato;
+    margin: 200px 0 0 30px;
+  }
+
+  .dot {
+    margin: 15px 0 0 35px;
+  }
+
+  #logo {
+    padding-left: 30px;
+  }
+}
+
+/* Larger than tablet */
+@media (min-width: 750px) {
+  .section-header {
+    font-family: Lato;
+    font-size: 22px;
+    padding: 20px 0 20px 100px;
+  }
+
+  .eamon {
+    margin-top: 50px;
+    margin-left: 100px;
+    display: inline-block;
+    float: left;
+    padding-bottom: 20px;
+  }
+
+  .eamon img {
+    width: 300px;
+  }
+
+  .fname {
+    position: absolute;
+    color: white;
+    font-family: GothamBold;
+    font-size: 40px;
+    padding-top: 60px;
+    padding-left: 230px;
+    text-shadow: 3px 3px 15px #000000;
+  }
+
+  .lname {
+    color: black;
+    font-family: GothamBold;
+    font-size: 40px;
+    padding-top: 60px;
+  }
+
+  .bio {
+    margin: 20px 100px 0 100px;
+    font-family: Lato;
+    font-size: 16px;
+    clear: both;
+    padding-bottom: 40px;
+    max-width: 700px;
+
+
+  }
+
+  #cf3 {
+    position:relative;
+    padding-top: 150px;
+    margin-bottom: 400px;
+  }
+
+  #cf3 img {
+    width: 400px;
+  }
+
+  .title {
+    font-size: 40px;
+    font-family: Lato;
+    margin: 275px 0 0 100px;
+  }
+
+  .dot {
+    margin: 15px 0 0 105px;
+  }
+
+  #logo {
+    padding-left: 100px;
+  }
+}
+
+/* Larger than desktop */
+@media (min-width: 1000px) {
+  .bio {
+    margin: 20px 50px 0 600px;
+    font-family: Lato;
+    font-size: 16px;
+    clear: none;
+  }
+
+  .eamon {
+    margin-top: 50px;
+    margin-left: 175px;
+    display: inline-block;
+    float: left;
+    padding-bottom: 50px;
+  }
+
+  .eamon img {
+    width: 375px;
+  }
+
+  .fname {
+    position: absolute;
+    color: white;
+    font-family: GothamBold;
+    font-size: 40px;
+    padding-top: 60px;
+    padding-left: 380px;
+    text-shadow: 3px 3px 15px #000000;
+  }
+
+  .lname {
+    color: black;
+    font-family: GothamBold;
+    font-size: 40px;
+    padding-top: 60px;
+  }
+
+  #cf3 {
+    position:relative;
+    padding-top: 150px;
+    margin-bottom: 500px;
+  }
+
+  #cf3 img {
+    width: 450px;
+  }
+
+  .home-left {
+    float: left;
+  }
+
+  .title {
+    font-size: 50px;
+    font-family: Lato;
+    margin: 275px 0 0 175px;
+  }
+
+  .dot {
+    margin: 15px 0 0 185px;
+  }
+
+  .dot img {
+    padding-right: 20px;
+  }
+
+  .section-header {
+    font-family: Lato;
+    font-size: 25px;
+    padding: 20px 0 20px 175px;
+  }
+
+  #logo {
+    padding-left: 175px;
+  }
+}
+
+@media (min-width: 1200px) {
+  #cf3 {
+    position:relative;
+    padding-top: 150px;
+    margin-bottom: 600px;
+  }
+
+  #cf3 img {
+    position: absolute;
+    right: 0;
+    width: 600px;
+  }
+
+  .home-left {
+    float: left;
+  }
+
+  .title {
+    font-size: 50px;
+    font-family: Lato;
+    margin: 275px 0 0 175px;
+  }
+
+  .dot {
+    margin: 15px 0 0 185px;
+  }
+
+  .dot img {
+    padding-right: 20px;
+  }
+
+  .bio {
+    margin: 40px 150px 0 600px;
+    font-family: Lato;
+    font-size: 18px;
+  }
+
+  .fname {
+    position: absolute;
+    color: white;
+    font-family: GothamBold;
+    font-size: 40px;
+    padding-top: 60px;
+    padding-left: 380px;
+    text-shadow: 3px 3px 15px #000000;
+  }
+
+  .lname {
+    color: black;
+    font-family: GothamBold;
+    font-size: 40px;
+    padding-top: 60px;
+  }
+}
+
+/*******************************************************
+					MODAL
+*******************************************************/
+#myImg {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#myImg:hover {opacity: 0.7;}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 100%;
+  max-width: 700px;
+  padding-bottom: 200px;
+  -webkit-user-drag: none;
+  user-drag: none;
+}
+
+/* Caption of Modal Image */
+#caption {
+  padding-bottom: 10px;
+  display: inline-block;
+  color: #ccc;
+  font-family: Lato;
+  font-size: 24px;
+  vertical-align: top;
+}
+
+#price {
+
+  padding-left: 15px;
+  display: inline-block;
+  color: #ccc;
+  font-family: Lato;
+  font-size: 24px;
+  vertical-align: top;
+}
+
+.wrapModalImg {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.purchase {
+  display: inline-block;
+  margin-left: 20px;
+}
+
+#discount_code {
+  display: inline-block;
+  padding-left: 5px;
+  margin-left: 40px;
+  vertical-align: 40%;
+
+}
+
+/* Add Animation */
+.modal-content, #caption, .purchase {
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+  from {-webkit-transform:scale(0)}
+  to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+  from {transform:scale(0)}
+  to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+  .modal-content {
+    width: 100%;
+  }
+}
+
+
+.eamonism {
+  background-color: white;
+}
