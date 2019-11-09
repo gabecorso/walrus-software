@@ -11,6 +11,7 @@ import {Navbar, Nav} from "react-bootstrap";
 import Home from "./Home";
 import DesertRygon from "./DesertRygon";
 import Eamonism from "./Eamonism";
+import Lizzy from "./LJ/Lizzy.js";
 
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
                        <Nav.Link><Link to="/">Home</Link></Nav.Link>
                         <Nav.Link><Link to="/desert-rygon">Desert Rygon</Link></Nav.Link>
                        <Nav.Link><Link to="/eamonism">Eamonism</Link></Nav.Link>
+                       <Nav.Link><Link to="/lizzy">Lizzy</Link></Nav.Link>
                    </Nav>
               </Navbar>
 
@@ -37,6 +39,9 @@ function App() {
                   </Route>
                   <Route path="/eamonism">
                      <Eamonism />
+                  </Route>
+                  <Route path="/lizzy">
+                      <Lizzy />
                   </Route>
               </Switch>
           </div>
