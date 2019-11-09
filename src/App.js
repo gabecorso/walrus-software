@@ -9,7 +9,7 @@ import {
 
 import {Navbar, Nav} from "react-bootstrap";
 import Home from "./Home";
-import DesertRygon from "./DesertRygon";
+import DesertRygon from "./DesertRygon/DesertRygon";
 import Eamonism from "./Eamonism";
 import Lizzy from "./LJ/Lizzy.js";
 
