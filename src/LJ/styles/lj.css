@@ -1,6 +1,6 @@
 .button-in {
   width: 132px;
-  height: 60px;
+  height: 40px;
   color: white;
   text-align: center;
   overflow: hidden;
@@ -37,11 +37,30 @@
   height: 20px;
   border-radius: 50%;
 }
+.cta-container {
+  margin-top: 50px;
+  width: 500px;
+  height: 300px;
+  text-align: center;
+  padding: 5%;
+  background-color: tomato;
+  border-radius: 5px;
+}
+@media (max-width: 600px) {
+  .cta-container {
+    width: 300px;
+  }
+}
+@media (max-width: 400px) {
+  .cta-container {
+    width: 250px;
+  }
+}
 .button-out {
   color: blue;
   text-align: center;
   width: 132px;
-  height: 60px;
+  height: 40px;
   border: 5px dashed crimson;
   background-color: gold;
   position: absolute;
