@@ -20,16 +20,7 @@ function App() {
 
       <Router>
           <div>
-              <Navbar>
-                   <Nav>
-                       <Nav.Link><Link to="/">Home</Link></Nav.Link>
-                        <Nav.Link><Link to="/desert-rygon">Desert Rygon</Link></Nav.Link>
-
-                       <Nav.Link><Link to="/creative-grief">Creative Grief</Link></Nav.Link>
-                       <Nav.Link><Link to="/eamonism">Eamonism</Link></Nav.Link>
-                       <Nav.Link><Link to="/lizzy">Lizzy</Link></Nav.Link>
-                   </Nav>
-              </Navbar>
+              
 
               {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
