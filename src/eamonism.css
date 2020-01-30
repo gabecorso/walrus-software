@@ -5,7 +5,7 @@ html, body {
 
 @font-face {
   font-family: GothamBold;
-  src: url("/assets/fonts/GothamBold.otf") format("otf"); }
+  src: url("/src/fonts/GothamBold.otf") format("otf"); }
 /*******************************************************
 					LANDING PAGE
 *******************************************************/

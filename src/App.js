@@ -12,6 +12,7 @@ import Home from "./Home";
 import DesertRygon from "./DesertRygon/DesertRygon";
 import Eamonism from "./Eamonism";
 import Lizzy from "./LJ/Lizzy.js";
+import CreativeGrief from "./CreativeGrief/CreativeGrief";
 
 
 function App() {
@@ -23,6 +24,8 @@ function App() {
                    <Nav>
                        <Nav.Link><Link to="/">Home</Link></Nav.Link>
                         <Nav.Link><Link to="/desert-rygon">Desert Rygon</Link></Nav.Link>
+
+                       <Nav.Link><Link to="/creative-grief">Creative Grief</Link></Nav.Link>
                        <Nav.Link><Link to="/eamonism">Eamonism</Link></Nav.Link>
                        <Nav.Link><Link to="/lizzy">Lizzy</Link></Nav.Link>
                    </Nav>
@@ -36,6 +39,9 @@ function App() {
                   </Route>
                   <Route path="/desert-rygon">
                      <DesertRygon />
+                  </Route>
+                  <Route path="/creative-grief">
+                     <CreativeGrief />
                   </Route>
                   <Route path="/eamonism">
                      <Eamonism />

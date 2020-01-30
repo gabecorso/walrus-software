@@ -12,15 +12,18 @@
   background: -webkit-linear-gradient(-45deg, #ff3c35 0%, #8e1702 43%);
   background: linear-gradient(135deg, #ff3c35 0%, #8e1702 43%);
   transform: rotate(45deg);
+  z-index: 4;
   overflow: hidden;
 }
 .cerro7 {
   margin: 0 -80px;
+  z-index: 4;
   transform: rotate(45deg) scale(0.7);
 }
 .cerro3,
 .cerro9,
 .cerro21 {
+  z-index: 4;
   position: absolute;
   width: 231px;
   height: 231px;
@@ -53,6 +56,30 @@
 }
 .duotone img {
   width: 100%;
+}
+.moon {
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  background-color: beige;
+}
+#xerxes-moon {
+  border: 1px solid midnightblue;
+  position: absolute;
+}
+#rogeria-moon {
+  z-index: 1;
+  border: 1px solid midnightblue;
+  animation-name: parabola;
+  animation-duration: 10s;
+  width: 10px;
+  height: 10px;
+  animation-iteration-count: infinite;
+}
+@keyframes arc {
+  100% {
+    transform: translate(100px, 200px);
+  }
 }
 /* CSS generated layers for duotone shadow/highlight colors */
 .duotone::before,

@@ -1,0 +1,14 @@
+
+
+@keyframes parabola{
+  $x: -30;
+  $step: 10 / 5 ;
+  @for $i from 0 through 10 {
+    $percent: 10% * $i;
+    #{$percent} {
+      $y: ($x * $x)/10;
+      transform: translate($x#{px}, $y#{px});
+      $x: $x + $step;
+    }
+  }
+}

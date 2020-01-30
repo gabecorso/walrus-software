@@ -1,19 +1,19 @@
 import React from 'react';
+
+import {Card, Jumbotron, Container, Button, Row, Col} from "react-bootstrap";
 import './styles/main.css';
+import './styles/parabola.css'
+import XerxesMoon from "./XerxesMoon/XerxesMoon";
 
 function DesertRygon() {
 
+
+
     return (
 
+        <Container style={{backgroundColor: 'slategray', maxHeight: '90vh', overflow: 'hidden'}}>
 
-        <div style={{backgroundColor: 'slategray'}}>
             <div>
-                <div className={'mx-auto'} style={{width: 50, height : 50}}>
-                    <div className={'star'}></div>
-                    <div className={'star'}></div>
-                    <div className={'star'}></div>
-                    <div className={'star'}></div>
-                </div>
                 <p style={{fontSize: 200, color: 'white', padding: 50}} className={' font-special'}>Desert Rygon</p>
             </div>
             <div className={'mx-auto'} style={{width: 800, height: 800, position: 'relative'}}>
@@ -27,9 +27,13 @@ function DesertRygon() {
                     <div className="cerro7">
                         <div className="cerro9"></div>
                     </div>
+                    <div className={'moon'} id={'rogeria-moon'}></div>
+                    <XerxesMoon/>
                 </div>
+
             </div>
-        </div>
+
+        </Container>
 
     );
 }

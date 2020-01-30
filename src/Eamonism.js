@@ -1,7 +1,7 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './App.css';
 import './eamonism.scss';
-import {Card, Jumbotron} from "react-bootstrap";
+import {Card, Jumbotron, Modal} from "react-bootstrap";
 import { FaBeer } from 'react-icons/fa';
 
 var index;
@@ -46,6 +46,13 @@ let stock = [
             ];
 class Eamonism extends React.Component {
 
+    constructor(props) {
+        super(props);
+       this.state = {
+           show: false,
+               show_sticker: false
+        }
+    }
 
 
     check() {
@@ -68,30 +75,15 @@ class Eamonism extends React.Component {
 
     }
     generateModal(index) {
-        var modal = document.getElementById('myModal');
-        
-        // Get the image and insert it inside the modal - use its "alt" text as a caption
-        var img = document.getElementById(index);
-        var modalImg = document.getElementById("img");
-        var captionText = stock[index].title;
-        document.getElementById('item_name').value = stock[index].title;
-        modal.style.display = "block";
-        modalImg.src = stock[index].full_path;
-
-        var price = document.getElementById('price');
-        price.innerHTML = stock[index].display_price;
-        document.getElementById('price_input').value = stock[index].price;
-
-        var caption = document.getElementById("caption");
-        caption.innerHTML = captionText;
-
-        // Get the <span> element that closes the modal
-        var span = document.getElementsByClassName("close")[0];
-
-        // When the user clicks on <span> (x), close the modal
-        span.onclick = function () {
-            modal.style.display = "none";
-        }
+        this.setState({
+            show: true,
+            name: stock[index].title,
+            price: stock[index].price,
+            caption_text: stock[index].title,
+            display_price: stock[index].display_price,
+            image: stock[index].full_path,
+            id: index
+        });
     }
     startLightBox(event) {
         index = parseInt(event.target.id);
@@ -260,25 +252,25 @@ class Eamonism extends React.Component {
 
             </div>
 
-            <div id="myModal" class="modal">
-                <span class="close">×</span>
-                <div class="wrapModalImg">
+            <Modal show={this.state.show} onHide={() => {this.setState({show: false})}} id="myModal" className="modal">
+                <span >×</span>
+                <div >
                     <div id="caption"></div>
                     <form class="purchase" action="/welcome" method="post" accept-charset="utf-8">
-                        <input type="hidden" name="item_name" id="item_name" value=""></input>
+                        <input type="hidden" name="item_name" id="item_name" value={this.state.name}></input>
                         <button class="purchase-btn" type="submit" value=""></button>
-                        <span id="price"></span>
-                        <input type="hidden" name="price_input" id="price_input" value=""></input>
+                        <span id="price">{this.state.display_price}</span>
+                        <input type="hidden" name="price_input" id="price_input" value={this.state.price}></input>
                         <input type="text" name="discount_code" id="discount_code" value=""
                                placeholder="Coupon Code"></input>
                     </form>
 
 
-                    <img class="modal-content" id="img"/>
+                    <img class="modal-content" src={this.state.image} id="img"/>
                 </div>
-            </div>
+            </Modal>
 
-            <div id="myStickerModal" class="modal">
+            <Modal show={this.state.show_sticker} onHide={() => {this.setState({show_sticker: false})}} id="myStickerModal" className="modal">
                 <span class="close">×</span>
                 <div class="wrapModalImg">
                     <div id="caption"></div>
@@ -293,7 +285,7 @@ class Eamonism extends React.Component {
 
                     <img class="modal-content" id="img"/>
                 </div>
-            </div>
+            </Modal>
 
 
             <div class="section-header">STICKERS</div>

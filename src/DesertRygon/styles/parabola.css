@@ -1,0 +1,25 @@
+@keyframes parabola {
+  0% {
+    transform: translate(-30px, 90px); }
+  10% {
+    transform: translate(-28px, 78.4px); }
+  20% {
+    transform: translate(-26px, 67.6px); }
+  30% {
+    transform: translate(-24px, 57.6px); }
+  40% {
+    transform: translate(-22px, 48.4px); }
+  50% {
+    transform: translate(-20px, 40px); }
+  60% {
+    transform: translate(-18px, 32.4px); }
+  70% {
+    transform: translate(-16px, 25.6px); }
+  80% {
+    transform: translate(-14px, 19.6px); }
+  90% {
+    transform: translate(-12px, 14.4px); }
+  100% {
+    transform: translate(-10px, 10px); } }
+
+/*# sourceMappingURL=parabola.css.map */
